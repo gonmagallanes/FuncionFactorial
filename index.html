@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obtener Valor Input por ID</title>
+  </head>
+  <body>
+    <label for="miInput">Ingresa tu numero:</label>
+    <input type="number" id="miInput" />
+    <button onclick="mostrarValorPorId()">Mostrar Valor</button>
+
+    <p id="resultadoId"></p>
+
+    <script>
+      function mostrarValorPorId() {
+        const inputElement = document.getElementById("miInput");
+        const valor = inputElement.value;
+        let sum = 1;
+        for (let i = 1; i <= valor; i++) {
+          sum = sum * i;
+        }
+
+        return (document.getElementById("resultadoId").textContent = `  El valor factorial de tu numero es:  ${sum}  `);
+      }
+    </script>
+  </body>
+</html>
